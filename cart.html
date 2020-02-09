@@ -138,73 +138,14 @@
               <h1 class="cart__title">В корзине 99992 товара</h1>
               <button class="btn  btn--text cart__clear-btn" type="button">Очистить корзину</button>
             </header>
-            <table class="cart__table">
+            <table class="cart__table" id="js-cart__table">
               <tr class="cart__table-headers">
                 <th class="cart__col-1"></th>
                 <th class="cart__col-2">Товар</th>
                 <th class="cart__col-3">Кол-во</th>
                 <th class="cart__col-4">Цена</th>
                 <th class="cart__col-5"></th>
-              </tr>
-              <tr class="cart__product">
-                <td class="cart__col-1">
-                  <img class="cart__item-img" src="img/tsennye-resheniya.jpg" alt="Ценные решения">
-                </td>
-                <td class="cart__col-2">
-                  <div class="cart__item-name">Название какие-то очень длинное, совершенно невменяемое для книгоиздателя</div>
-                </td>
-                <td class="cart__col-3">
-                  <div class="field-num  field-num--bg-tran">
-                    <span class="field-num__input-wrap">
-                      <button class="field-num__btn-minus" type="button">-</button>
-                      <input class="field-num__input" type="number" value="2" step="1" min="1"/>
-                      <button class="field-num__btn-plus" type="button">+</button>
-                    </span>
-                  </div>
-                </td>
-                <td class="cart__col-4">
-                  <span class="cart__item-price">1 024 ₽</span>
-                </td>
-                <td class="cart__col-5">
-                  <button class="close cart__product-del-btn" type="button">
-                    <svg width="16" height="16">
-                      <use xlink:href="#close"></use>
-                    </svg>
-                  </button>
-                </td>
-              </tr>
-              <tr class="cart__product">
-                <td class="cart__col-1">
-                  <img class="cart__item-img" src="img/tsennye-resheniya.jpg" alt="Ценные решения">
-                </td>
-                <td class="cart__col-2">
-                  <div class="cart__item-name">Название</div>
-                </td>
-                <td class="cart__col-3">
-                  <div class="field-num  field-num--bg-tran">
-                    <span class="field-num__input-wrap">
-                      <button class="field-num__btn-minus" type="button">-</button>
-                      <input class="field-num__input" type="number" value="1" step="1" min="1"/>
-                      <button class="field-num__btn-plus" type="button">+</button>
-                    </span>
-                  </div>
-                </td>
-                <td class="cart__col-4">
-                  <span class="cart__item-price">999 024 ₽</span>
-                </td>
-                <td class="cart__col-5">
-                  <button class="close cart__product-del-btn" type="button">
-                    <svg width="16" height="16">
-                      <use xlink:href="#close"></use>
-                    </svg>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="cart__products-price" colspan="5">
-                  Итого к оплате: <strong class="cart__products-price-num" id="cart-products-price-num">2 200 ₽</strong>
-                </td>
-              </tr>
+              </tr>            
             </table>
             <div class="cart__checkout checkout">
               <h2 class="checkout__title">Оформление заказа</h2>
@@ -434,6 +375,7 @@
     <script src="js/choices.min.js"></script>
     <script src="js/nouislider.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/modules/cards.js"></script>
     <div class="modal__backdrop"></div>
   </body>
 </html>
