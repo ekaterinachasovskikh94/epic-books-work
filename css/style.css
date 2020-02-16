@@ -1995,6 +1995,9 @@ a.pagination__item:hover, a.pagination__item:focus {
       padding-top: 20px;
       padding-right: 30px;
       font-size: 22px; }
+      .cart__product_close {
+        display: none;
+      }
   .cart__courier-data-right {
     display: -webkit-box;
     display: flex;

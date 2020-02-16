@@ -1,5 +1,6 @@
 ready(function(){
 
+
   // В этом месте должен быть написан ваш код
 let cardsHTML = '';
 
@@ -15,7 +16,7 @@ function createCardHTML(card) {
                   <div class="field-num  field-num--bg-tran">
                     <span class="field-num__input-wrap">
                       <button class="field-num__btn-minus" type="button">-</button>
-                      <input class="field-num__input" type="number" value="2" step="1" min="1"/>
+                      <input class="field-num__input" type="number" value="1" step="1" min="0"/>
                       <button class="field-num__btn-plus" type="button">+</button>
                     </span>
                   </div>
@@ -38,6 +39,57 @@ for (let book of books) {
 }
 
 document.getElementById('js-cart__table').innerHTML = cardsHTML;
+
+
+// let closeProduct = document.querySelectorAll('cart__product');
+
+// for (let i = 0, j = closeProduct.length; i < j; i++) {
+//     closeProduct[i].addEventListener('click', function(e) {
+//         if (hasClass(e.target, 'cart__product-del-btn')) {
+//             this.classList.toggle('cart__product_close');
+//         }
+//     })
+// }
+
+function cardCounter(input, plus, minus) {
+  let numInput = document.querySelector(input);
+
+  let btnPlus = document.querySelector(plus);
+  btnPlus.addEventListener('click', function () {
+      numInput.value++;
+  });
+
+  let btnMinus = document.querySelector(minus);
+  btnMinus.addEventListener('click', function () {
+      numInput.value--;
+      if (numInput.value <= 1) {
+        numInput.value = 1
+      }
+  });
+
+  numInput.onchange = function() {
+     if (numInput.value <= 1) {
+        numInput.value = 1
+      }
+  }
+}
+
+cardCounter('.field-num__input', '.field-num__btn-plus', '.field-num__btn-minus');
+
+
+
+    // let count = 1;
+    // let countEl = document.getElementById(".field-num__input");
+    // function plus(){
+    //     count++;
+    //     countEl.value = count;
+    // }
+    // function minus(){
+    //   if (count > 1) {
+    //     count--;
+    //     countEl.value = count;
+    //   }  
+    // }
 
 
   // ВНИМАНИЕ!
